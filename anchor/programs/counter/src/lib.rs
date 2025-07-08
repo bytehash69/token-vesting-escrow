@@ -6,7 +6,7 @@ use anchor_spl::{associated_token::AssociatedToken, token_interface::{Mint, Toke
 declare_id!("FqzkXZdwYjurnUKetJCAvaUw5WAqbwzU6gZEwydeEfqS");
 
 #[program]
-pub mod counter {
+pub mod vesting {
     use anchor_spl::token_interface;
 
     use super::*;
@@ -24,7 +24,6 @@ pub mod counter {
             bump: ctx.bumps.vesting_account,
             treasury_bump: ctx.bumps.treasury_token_account
         };
-
         Ok(())
     }
 
